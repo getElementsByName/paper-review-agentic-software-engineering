@@ -15,63 +15,62 @@ selectable: true
 
 <br />
 
-- 핵심 전환 질문: 빨리 만드는 것과 신뢰할 수 있는 배포을 동시에 달성할 수 있는가?
-- 오늘의 관점: 모델 성능 비교가 아니라 조직 운영체계 설계
+- 핵심 전환 질문: 빨리 만드는 것과 신뢰할 수 있는 배포를 동시에 달성할 수 있는가?
+- 오늘의 관점: 모델 성능 비교가 아니라 AI Native 전환기를 읽는 개념 언어 정리
 - 중심 프레임
   > 구조화된 에이전틱 소프트웨어 엔지니어링(Structured Agentic Software Engineering, SASE)
 
 <!--
 발표 스크립트
 오늘 발표의 출발점은 "에이전트가 코드를 잘 쓰는가"가 아닙니다.
-핵심은 "우리 조직이 에이전트와 함께 신뢰 가능한 소프트웨어를 지속적으로 만들 수 있는 구조를 갖췄는가"입니다.
+핵심은 "AI Native 전환기를 설명할 때 어떤 개념과 언어를 기준으로 삼을 것인가"입니다.
 지금 시장에서는 코드 생성 속도는 이미 매우 빠르게 개선되고 있습니다.
 하지만 속도만으로는 실제 서비스 품질, 운영 안정성, 팀 학습 속도를 보장하지 못합니다.
 그래서 오늘은 도구 데모 중심 설명이 아니라, 협업 구조와 검증 구조를 중심으로 보겠습니다.
 특히 Ahmed Hassan 연구팀의 SASE 논문과 No Vibes Allowed 실무 사례를 연결해, 현장 실천과 연구 프레임을 하나의 흐름으로 설명하겠습니다.
-발표를 들으신 뒤에는 우리 팀의 현재 수준을 진단하고, 다음 주부터 적용할 최소 변화 항목까지 결정할 수 있도록 구성했습니다.
+발표를 들으신 뒤에는 관련 자료를 다시 찾기 쉬운 키워드와 쟁점 언어를 확보할 수 있도록 구성했습니다.
 -->
 
 ---
 
-# 발표 목적(Objective)과 최종 산출물(Deliverable)
+# 발표 목적(Objective)과 기대 산출물(Expected Output)
 
-1. 속도 대 신뢰 간극(Speed vs Trust Gap)의 원인을 구조적으로 이해
-2. 구조화된 에이전틱 소프트웨어 엔지니어링(Structured Agentic Software Engineering, SASE)의 핵심 개념을 실무 언어로 번역
-3. 우리 팀 도입을 위한 최소 실행안(Minimum Viable Adoption Plan) 제시
+1. AI Native 전환기의 Software Engineering 흐름을 conceptual 관점에서 이해
+2. 발표 후 관련 내용을 빠르게 재탐색할 수 있도록 핵심 키워드(Keywords)와 참조 축(Reference Axes) 정리
+3. 쟁점을 토론할 때 반복 사용 가능한 질문 언어(Discussion Language) 확보
 
-- 최종 산출물: 오늘 발표 종료 시점에 도입 우선순위(Adoption Priority) 1~2개를 합의
+- 기대 산출물: 발표 종료 시점에 키워드 맵(Keyword Map)과 쟁점 질문 템플릿(Question Templates) 초안 확보
 
 <!--
 발표 스크립트
-오늘 발표의 목표는 정보 전달이 아니라 실행 결정입니다.
-첫째, 우리가 겪고 있는 병목이 단순히 개인 역량 문제인지, 아니면 구조 문제인지 구분해야 합니다.
-둘째, SASE가 제시한 개념을 연구 용어 그대로 두지 않고, 우리 조직의 개발 언어로 변환해야 합니다.
-셋째, 논문 이해로 끝나지 않도록 실제 도입 순서를 정해야 합니다.
-발표 마지막에는 "무엇을 먼저 시작할 것인가"를 선택 가능한 형태로 정리해 두겠습니다.
-즉 오늘의 성공 기준은 "좋은 아이디어를 들었다"가 아니라 "다음 스프린트에서 실행할 항목을 합의했다"입니다.
+오늘 발표의 목표는 실행안을 정하는 것이 아니라, AI Native 전환기에서 Software Engineering 흐름을 해석하는 사고의 언어를 정리하는 것입니다.
+첫째, 복잡한 논의를 따라갈 수 있도록 핵심 개념어를 공통 기준으로 맞춥니다.
+둘째, 발표가 끝난 뒤에도 다시 찾아볼 수 있도록 검색 가능한 키워드 축을 남깁니다.
+셋째, 찬반 토론에서 바로 쓸 수 있는 쟁점 질문 문장을 확보하는 데 집중합니다.
+발표 마지막에는 결정안보다 탐색 프롬프트에 가까운 질문 목록을 남기겠습니다.
+즉 오늘의 성공 기준은 "무엇을 실행할지"보다 "무엇을 기준으로 더 찾아볼지"를 명확히 하는 것입니다.
 -->
 
 ---
 
 # 자료 출처(Source)와 신뢰 구분(Confidence Level)
 
-- 핵심 논문(Core Paper): *Agentic Software Engineering: Foundational Pillars and a Research Roadmap* (2025)
-- 실무 보강(Practice Signal): No Vibes Allowed 발표(YouTube Transcript)
-- 프로젝트 정리 문서(Project Docs): `key_message.md`, `slides.md` 기존안, `source_data/*`
+- 핵심 논문(Core Paper): [Agentic Software Engineering: Foundational Pillars and a Research Roadmap (2025)](https://arxiv.org/abs/2509.06216)
+- 실무 보강(Practice Signal): [No Vibes Allowed 발표(YouTube)](https://www.youtube.com/watch?v=rmvDxxNubIg)
 
 | 구분(Class) | 의미(Meaning) |
 |---|---|
 | 원문 근거(Direct Evidence) | 논문 본문 또는 발표 원문에서 직접 확인되는 내용 |
 | 발표 해석(Interpretation) | 원문을 기반으로 실무 적용을 위해 확장한 내용 |
-| 적용 제안(Proposal) | 우리 조직 실행을 위해 추가한 운영 가이드 |
+| 탐색 가이드(Exploration Guide) | 발표 후 추가 탐색을 돕기 위해 정리한 키워드/읽기 경로 |
 
 <!--
 발표 스크립트
-이번 발표는 문헌 요약과 실무 제안을 명확히 분리합니다.
+이번 발표는 문헌 요약과 탐색 가이드를 명확히 분리합니다.
 왜냐하면 연구의 주장과 발표자의 해석을 섞으면, 실행 단계에서 오해가 생기기 때문입니다.
 원문 근거는 논문과 발표 원문에서 직접 확인되는 사실입니다.
 발표 해석은 그 사실을 현업에 맞게 연결한 부분입니다.
-적용 제안은 우리 팀 상황을 반영해 새로 추가한 운영안입니다.
+탐색 가이드는 발표 후 스스로 읽어볼 자료와 키워드를 연결하기 위해 추가한 안내입니다.
 이 구분을 유지하면, 토론 시 "무엇이 사실인지"와 "무엇을 선택할지"를 분리해서 의사결정할 수 있습니다.
 -->
 
@@ -103,15 +102,15 @@ selectable: true
 1. 왜 지금 이 주제가 구조적 필수인가(Why Now)
 2. 현장 신호(Practice Signal): No Vibes Allowed와 연구 신호(Research Signal)
 3. SASE(Structured Agentic Software Engineering, 구조화된 에이전틱 소프트웨어 엔지니어링) 핵심 구조
-4. 실무 도입 로드맵(Adoption Roadmap)과 성숙도 모델(Maturity Model)
-5. 토론 질문(Discussion Questions)과 즉시 실행 항목(Immediate Actions)
+4. 후속 탐색 가이드(Post-talk Exploration Guide): 키워드와 읽기 경로
+5. 토론 질문(Discussion Questions)과 쟁점 언어(Issue Vocabulary)
 
 <!--
 발표 스크립트
 흐름을 먼저 제시하는 이유는, 오늘 내용이 단일 도구 소개가 아니라 시스템 설계 이야기이기 때문입니다.
 초반에는 문제의 성격을 정의하고, 중반에는 구조적 해법을 설명합니다.
-후반에는 실제 도입 순서와 리스크 관리를 다룹니다.
-즉 "문제 인식 → 구조 이해 → 실행 설계"의 순서입니다.
+후반에는 발표 이후 추가로 찾아볼 수 있는 탐색 경로와 쟁점 언어를 다룹니다.
+즉 "문제 인식 → 구조 이해 → 탐색 확장"의 순서입니다.
 이 순서를 유지해야 발표가 자연스럽게 이어지고, 각 슬라이드의 의미가 분명해집니다.
 -->
 
@@ -1042,51 +1041,50 @@ SASE는 방향성은 강하지만, 즉시 완성된 정답은 아닙니다.
 
 ---
 
-# 조직 성숙도 모델(Organizational Maturity Model): 6단계
-> 출처 상태: 발표 적용 모델(논문 직접 단계 모델 아님)
+# 탐색 성숙도 프레임(Exploration Maturity Frame): 6단계
+> 출처 상태: 발표 해석 모델(논문 직접 단계 모델 아님)
 
-| 단계(Level) | 조직 상태(State) | 핵심 도입 요소(Key Capability) |
+| 단계(Level) | 탐색 상태(Exploration State) | 핵심 확인 개념(Key Concepts to Validate) |
 |---|---|---|
-| L1 | 개인 자동화 중심(Individual Automation) | 코딩 에이전트 기본 활용 |
-| L2 | 증거 리뷰 시작(Evidence Review Start) | 병합 준비 팩(Merge-Readiness Pack, MRP) 도입 |
-| L3 | 명세 표준화(Spec Standardization) | 브리핑 스크립트(BriefingScript) |
-| L4 | 규범 코드화(Norm Codification) | 멘토 스크립트(MentorScript) |
-| L5 | 의사결정 루프 구조화(Decision Loop Structuring) | 상담 요청 팩(Consultation Request Pack, CRP) + 버전 관리 해상도(Version Controlled Resolution, VCR) |
-| L6 | 통합 운영(Integrated Operation) | 에이전트 지휘 환경(ACE) + 에이전트 실행 환경(AEE) + 수명주기/인프라 |
+| L1 | 용어 노출(Term Exposure) | ASE, Agentic Coding, ASE 3.0 |
+| L2 | 키워드 정렬(Keyword Alignment) | Evidence, Merge-readiness, Artifact-centric |
+| L3 | 구조 이해(Structure Understanding) | BriefingScript, MentorScript, LoopScript |
+| L4 | 쟁점 비교(Issue Comparison) | 속도 vs 신뢰, 자동화 vs 책임성 |
+| L5 | 교차 검증(Cross-validation) | 논문 주장과 실무 사례의 정합성 확인 |
+| L6 | 자기 언어화(Self-articulation) | 우리 맥락의 용어집(Glossary)과 질문집(Question Set) 정리 |
 
 - 권장 시작점(Recommended Start): L2 → L3
 
 <!--
 발표 스크립트
-이 성숙도 모델은 논문의 개념을 도입 단계로 번역한 운영 도구입니다.
+이 성숙도 프레임은 실행 단계가 아니라 이해 단계의 깊이를 점검하는 읽기 도구입니다.
 현실적으로는 L2에서 시작하는 것이 가장 효과적입니다.
-리뷰 병목이 줄어야 나머지 투자가 의미를 가지기 때문입니다.
-그다음 L3로 가서 브리핑 품질을 올리면, 상류에서부터 품질이 개선됩니다.
-L4 이후는 조직 운영 역량이 준비된 뒤에 확장하는 것이 안전합니다.
+먼저 키워드를 정렬해야 논문과 사례를 같은 의미로 읽을 수 있기 때문입니다.
+그다음 L3로 가서 아티팩트 구조를 이해하면, 용어가 실제 맥락과 연결됩니다.
+L4 이후는 찬반 쟁점을 비교하고 자기 언어로 정리하는 단계입니다.
 -->
 
 ---
 
-# 90일 도입 로드맵(90-Day Adoption Roadmap)
+# 90일 후속 학습 로드맵(90-Day Exploration Roadmap)
 
 1. 1~30일(Discovery)
-   - 현행 리뷰 흐름 측정(Current Review Baseline)
-   - 병합 준비 팩(Merge-Readiness Pack, MRP) 최소 템플릿 정의
+   - 핵심 키워드 인덱스 작성(Keyword Indexing)
+   - 논문 Abstract/§1/§3.1 우선 읽기
 2. 31~60일(Pilot)
-   - 1개 팀에서 병합 준비 팩(Merge-Readiness Pack, MRP) + 브리핑 스크립트(BriefingScript) 파일럿
-   - 리뷰 지연 시간(Review Latency)과 재작업 빈도(Rework Frequency) 추적
-3. 61~90일(Scale Decision)
-   - 상담 요청 팩(Consultation Request Pack, CRP)·버전 관리 해상도(Version Controlled Resolution, VCR) 시범 도입
-   - 확대 여부(Scale/Stop/Pivot) 의사결정
+   - 쟁점별 비교 읽기(Issue-based Comparative Reading): §7.7/§9 + 실무 사례
+   - 용어 혼용 리스트(Term Confusion List) 정리
+3. 61~90일(Synthesis)
+   - 개인/팀용 용어집(Glossary)과 질문집(Question Set) 업데이트
+   - 다음 분기 탐색 주제(Next Exploration Focus) 선정
 
 <!--
 발표 스크립트
-로드맵의 핵심은 "작고 빠른 검증"입니다.
-첫 30일은 도입보다 측정에 집중해야 합니다.
-기준선 없이 도입하면 개선 여부를 판단할 수 없습니다.
-다음 30일은 제한된 팀에서 파일럿을 돌려 리스크를 확인합니다.
-마지막 30일은 확대 여부를 결정하는 단계입니다.
-이때 중요한 것은 성공 사례를 과장하지 않고, 실패 조건까지 기록하는 것입니다.
+로드맵의 핵심은 "한 번 듣고 끝내지 않는 학습 루프"입니다.
+첫 30일은 키워드와 원문 위치를 매칭해 재탐색 기반을 만듭니다.
+다음 30일은 쟁점 중심으로 읽으면서 용어 혼용을 줄입니다.
+마지막 30일은 용어집과 질문집을 업데이트해 다음 토론에 재사용합니다.
+이때 중요한 것은 정답을 확정하기보다, 질문의 정확도를 높이는 것입니다.
 -->
 
 ---
@@ -1114,24 +1112,23 @@ L4 이후는 조직 운영 역량이 준비된 뒤에 확장하는 것이 안전
 
 ---
 
-# 리더십 체크리스트(Leadership Checklist)
+# 후속 탐색 체크리스트(Post-talk Exploration Checklist)
 
-- 우리 조직은 현재 어디에 있는가?
-  - 단계(Level) L1~L6 중 현재 위치
-- 무엇을 먼저 시작할 것인가?
-  - 병합 준비 팩(Merge-Readiness Pack, MRP) / 브리핑 스크립트(BriefingScript) / 상담 요청 팩(Consultation Request Pack, CRP)
-- 무엇을 측정할 것인가?
-  - 병합 준비 비율(Merge-ready Ratio), 리뷰 지연 시간(Review Latency)
-- 무엇을 금지할 것인가?
-  - 근거 없는 병합(No-Evidence Merge), 기록 없는 구두 승인(No-Record Approval)
+- 어떤 키워드로 다시 찾을 것인가?
+  - 예: conceptual scaffold, merge-readiness, artifact-centric workflow, ASE 3.0
+- 어떤 쟁점 축으로 읽을 것인가?
+  - 예: 속도 vs 신뢰, 자동화 vs 책임성, 개인 생산성 vs 팀 검증 가능성
+- 어떤 원문 구간부터 확인할 것인가?
+  - 논문 Abstract/§1/§3.1/§7.7/§9 우선 확인
+- 어떤 문장으로 토론을 시작할 것인가?
+  - "우리의 병목은 생성 품질인가, 검증 구조인가?"
 
 <!--
 발표 스크립트
-기술 전환은 결국 리더십 의사결정입니다.
-도구 선택보다 운영 원칙을 먼저 정해야 합니다.
-특히 금지 규칙을 명확히 두는 것이 중요합니다.
-예를 들어 근거 없는 병합을 허용하면, 어떤 프레임도 무너집니다.
-반대로 기준과 기록이 명확하면, 도구가 바뀌어도 조직 학습은 유지됩니다.
+이 슬라이드는 실행 지시가 아니라 발표 후 탐색 가이드입니다.
+핵심은 "무엇을 검색하고, 어떤 쟁점 축으로 읽고, 어떤 질문 문장으로 토론을 시작할지"를 남기는 것입니다.
+키워드와 질문 문장이 정리되면, 발표가 끝난 뒤에도 논의가 끊기지 않습니다.
+즉 이 체크리스트의 목적은 실행 합의가 아니라, 재탐색 가능성과 대화 지속성을 높이는 것입니다.
 -->
 
 ---
@@ -1140,15 +1137,15 @@ L4 이후는 조직 운영 역량이 준비된 뒤에 확장하는 것이 안전
 > 출처(원문): §9
 
 - 에이전틱 소프트웨어 엔지니어링(Agentic Software Engineering)의 본질은 코드 생성(Code Generation) 자체가 아니라 협업 구조(Collaboration Structure)
-- 구조화된 에이전틱 소프트웨어 엔지니어링(SASE)은 공통 언어(Common Vocabulary)와 운영 프레임(Operating Frame)을 제공
+- 구조화된 에이전틱 소프트웨어 엔지니어링(SASE)은 공통 언어(Common Vocabulary)와 개념 프레임(Conceptual Frame)을 제공
 - 실무 핵심 전환(Practical Shift)
-  - 프롬프트 중심(Prompt-centric) → 아티팩트 중심(Artifact-centric)
-  - 개인 생산성(Individual Productivity) → 팀 신뢰성(Team Trustworthiness)
+  - 도구 팁 중심(Tool-tip-centric) → 개념어 중심(Concept-centric)
+  - 즉답 중심(Immediate Answer-centric) → 쟁점 정의 중심(Issue-definition-centric)
 
 ## 토론 질문(Discussion)
-1. 우리 팀의 현재 단계(Level)는 어디인가?
-2. 다음 스프린트에 도입할 첫 아티팩트(First Artifact)는 무엇인가?
-3. 인간 판단 기록(Human Decision Record)을 어떤 형식으로 남길 것인가?
+1. 오늘 들은 개념 중 추가 확인이 필요한 키워드 3개는 무엇인가?
+2. 같은 현상을 설명할 때 우리가 혼용하고 있는 용어는 무엇인가?
+3. 다음 탐색에서 먼저 읽을 원문 구간과 검색어 조합은 무엇인가?
 
 <!--
 발표 스크립트
@@ -1157,8 +1154,8 @@ L4 이후는 조직 운영 역량이 준비된 뒤에 확장하는 것이 안전
 하지만 신뢰는 자동으로 생기지 않습니다.
 신뢰는 구조화된 협업, 명시적 기준, 버전 관리된 의사결정에서 만들어집니다.
 따라서 오늘 이후 우리의 과제는 "더 강한 모델 찾기"가 아니라,
-"우리 팀의 협업 계약을 어떻게 설계할지"를 결정하는 것입니다.
-이것이 에이전틱 시대에서 지속 가능한 경쟁력을 만드는 길입니다.
+"어떤 키워드와 쟁점 언어로 다음 탐색을 이어갈지"를 정리하는 것입니다.
+이것이 에이전틱 전환기에 토론의 질을 높이는 가장 현실적인 출발점입니다.
 -->
 
 ---
