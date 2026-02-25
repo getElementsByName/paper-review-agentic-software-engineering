@@ -23,3 +23,16 @@ This repository is configured for building and presenting slides with [Slidev](h
    ```bash
    npm run export
    ```
+
+## Deploy to GitHub Pages
+
+`main` branch push 시 GitHub Actions가 자동으로 정적 빌드 후 Pages에 배포합니다.
+
+1. GitHub 저장소에서 `Settings > Pages`로 이동합니다.
+2. `Build and deployment`의 `Source`를 `GitHub Actions`로 선택합니다.
+3. `main`에 푸시하면 `.github/workflows/deploy-pages.yml`이 실행됩니다.
+
+배포 URL:
+
+- 사용자/조직 사이트(`{user}.github.io`) 저장소: `https://{user}.github.io/`
+- 프로젝트 저장소: `https://{user}.github.io/{repo}/`
