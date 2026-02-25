@@ -1,0 +1,50 @@
+.slidev-layout {
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.slidev-layout h1 {
+  font-size: 1.6em;
+}
+
+.slidev-layout h2 {
+  font-size: 1.2em;
+}
+
+.slidev-layout.cover h1 {
+  font-size: 2.3em;
+}
+
+.slidev-layout.cover h2 {
+  font-size: 1.5em;
+}
+
+.slidev-layout table {
+  font-size: 0.8em;
+}
+
+.slidev-layout code {
+  font-size: 0.82em;
+}
+
+/* Allow long slide content to be scrollable instead of clipped */
+.slidev-slide-container,
+.slidev-slide-content {
+  overflow-y: auto !important;
+}
+
+.slidev-slide-content {
+  overflow-x: hidden !important;
+}
+
+/* Enable drag-based text range selection inside slides */
+.slidev-layout,
+.slidev-layout * {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.slidev-layout ::selection {
+  background: #bfdbfe;
+  color: #111827;
+}
