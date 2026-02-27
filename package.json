@@ -5,6 +5,7 @@
   "description": "Slidev deck for Agentic Software Engineering review",
   "scripts": {
     "build": "slidev build",
+    "build.intra": "pnpm exec slidev build --base /wh-y/paper-review-agentic-software-engineering/",
     "dev": "slidev",
     "export": "slidev export"
   },
