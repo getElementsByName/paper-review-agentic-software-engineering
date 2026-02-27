@@ -1,5 +1,5 @@
 <template>
-  <div class="global-top">Agentic Software Engineering (SE 3.0)</div>
+  <div class="global-top">Structured Agentic Software Engineering (SE 3.0)</div>
 </template>
 
 <style scoped>
@@ -9,7 +9,7 @@
   left: 1.5rem;
   right: 1.5rem;
   font-size: 0.75rem;
-  color: #6b7280;
+  color: var(--page-muted);
   pointer-events: none;
   z-index: 20;
 }

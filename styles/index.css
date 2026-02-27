@@ -1,30 +1,93 @@
+/* Project design tokens (themeConfig primary becomes --slidev-theme-primary) */
+:root {
+  --page-primary: var(--slidev-theme-primary, #2563eb);
+  --page-muted: #6b7280;
+  --page-color: #111827;
+  --page-background: var(--slidev-theme-background, #f8fafc);
+  --page-font-sans: inherit;
+  --page-font-mono: ui-monospace, monospace;
+}
+
 .slidev-layout {
   font-size: 20px;
   line-height: 1.35;
+  color: var(--page-color);
 }
 
 .slidev-layout h1 {
   font-size: 1.6em;
+  color: var(--page-color);
 }
 
 .slidev-layout h2 {
   font-size: 1.2em;
+  color: var(--page-color);
+}
+
+.slidev-layout.cover {
+  text-align: center;
 }
 
 .slidev-layout.cover h1 {
   font-size: 2.3em;
+  letter-spacing: -0.02em;
+  color: var(--page-color);
 }
 
 .slidev-layout.cover h2 {
   font-size: 1.5em;
+  color: var(--page-muted);
+  font-weight: 500;
+}
+
+.slidev-layout.cover div[align="right"] {
+  font-size: 0.85em;
+  color: var(--page-muted);
+  margin-top: 1.5rem;
+}
+
+.slidev-layout.section {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.slidev-layout.section h1 {
+  font-size: 1.85em;
+  margin-bottom: 0.5rem;
 }
 
 .slidev-layout table {
   font-size: 0.8em;
 }
 
+/* Table header: distinct from body for readability */
+.slidev-layout table thead th {
+  background: var(--slidev-theme-primary, #646464);
+  color: var(--slidev-theme-background, #f8fafc);
+  font-weight: 600;
+  padding: 0.5em 0.65em;
+  border-bottom: 2px solid var(--slidev-theme-primary, #334155);
+  text-align: left;
+}
+
+.slidev-layout table tbody td {
+  padding: 0.4em 0.65em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 .slidev-layout code {
   font-size: 0.82em;
+}
+
+/* Reference / footnote: lower visual prominence */
+.slidev-layout .slide-ref {
+  font-size: 0.75em;
+  color: var(--page-muted);
+  margin-top: 0.5rem;
+}
+
+.slidev-layout .slide-ref a {
+  color: var(--page-muted);
 }
 
 /* Allow long slide content to be scrollable instead of clipped */
@@ -46,5 +109,5 @@
 
 .slidev-layout ::selection {
   background: #bfdbfe;
-  color: #111827;
+  color: var(--page-color);
 }
