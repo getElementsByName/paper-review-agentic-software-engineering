@@ -57,6 +57,8 @@ src: ./chapters/story-map.md
 layout: section
 ---
 # No Vibes Allowed
+## Solving Hard Problems in Complex Codebases – Dex Horthy, HumanLayer
+## 발표 영상
 
 ---
 src: ./chapters/no-vibes-allowed.md
@@ -66,6 +68,7 @@ src: ./chapters/no-vibes-allowed.md
 layout: section
 ---
 # SASE 문제 인식
+### Agentic Software Engineering: Foundational Pillars and a Research Roadmap
 
 ---
 src: ./chapters/sase-problem.md
@@ -75,6 +78,7 @@ src: ./chapters/sase-problem.md
 layout: section
 ---
 # SASE 구조
+### Agentic Software Engineering: Foundational Pillars and a Research Roadmap
 
 ---
 src: ./chapters/sase-structure.md

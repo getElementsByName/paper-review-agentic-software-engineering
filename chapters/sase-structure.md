@@ -28,20 +28,9 @@ SASE는 단일 도구나 단일 알고리즘이 아닙니다.
 
 <KeyMessage message="협업은 단방향 명령이 아니라 양방향 계약 구조다; 인간은 정책을 보내고 에이전트는 CRP·MRP로 응답한다." />
 
-```mermaid
-flowchart LR
-subgraph H["인간 영역 (SE4H)"]
-ACE["[ACE]<br/>BriefingScript<br/>LoopScript<br/>MentorScript"]
-end
+![sase overview](../assets/imgs/sase_overview.png){width=90%}
 
-subgraph A["에이전트 영역 (SE4A)"]
-AEE["[AEE]<br/>실행·도구 호출·반복"]
-end
 
-ACE -->|정책과 의도| AEE
-AEE -->|CRP·MRP| ACE
-ACE -->|VCR| AEE
-```
 
 <SourceNote text="Fig.1, Fig.3, §4" />
 
