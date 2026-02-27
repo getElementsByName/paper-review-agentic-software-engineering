@@ -1,1 +1,0 @@
-import{f as e,o,e as s,t as n}from"./modules/vue-dBzYZe2V.js";import{u as _}from"./slidev/context-B3VUDym3.js";import{_ as r}from"./index-C9AZC8fF.js";const c={class:"source-note"},a=e({__name:"SourceNote",props:{text:{}},setup(t){return _(),(p,i)=>(o(),s("div",c,"참고: "+n(t.text),1))}}),f=r(a,[["__scopeId","data-v-b398d437"]]);export{f as _};
