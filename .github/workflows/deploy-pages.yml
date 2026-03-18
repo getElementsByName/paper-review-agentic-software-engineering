@@ -25,14 +25,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: npm
+          cache: pnpm
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -46,7 +51,7 @@ jobs:
             BASE_PATH="/$REPO_NAME/"
           fi
           echo "Using base path: $BASE_PATH"
-          npx slidev build --base "$BASE_PATH"
+          pnpm exec slidev build --base "$BASE_PATH"
           touch dist/.nojekyll
 
       - name: Upload artifact
